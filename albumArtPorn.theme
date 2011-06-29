@@ -38,7 +38,6 @@ DefaultValue=Windows Aero
 
 [Sounds]
 ; IDS_SCHEME_DEFAULT
-SchemeName=Landscape
 
 [Control Panel\Desktop]
 TileWallpaper=0
