@@ -6,7 +6,7 @@ if(empty($_GET['sub'])) {
 else {
      $subreddit = $_GET['sub'];
 }
-$json = json_decode(file_get_contents("http://www.reddit.com/r/".$subreddit."/.json",0,null,null), true);
+$json = json_decode(file_get_contents("http://www.reddit.com/r/".$subreddit.".json",0,null,null), true);
 echo '
 <rss version="2.0">
 <channel>
@@ -31,7 +31,6 @@ foreach ($json['data']['children'] as $child){
                   break;
      }
      echo   ' <enclosure url="'.$child['data']['url'].'" type="'.$data_type.'"/>
-     
             </item>';
   }
   else if ( $child['data']['domain'] == 'imgur.com'){
