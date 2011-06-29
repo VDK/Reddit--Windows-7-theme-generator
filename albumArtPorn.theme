@@ -1,4 +1,3 @@
-
 [Theme]
 ; Windows 7 - IDS_THEME_DISPLAYNAME_AERO
 DisplayName=Reddit AlbumArtPorn theme
@@ -38,7 +37,6 @@ DefaultValue=Windows Aero
 
 [Sounds]
 ; IDS_SCHEME_DEFAULT
-SchemeName=Landscape
 
 [Control Panel\Desktop]
 TileWallpaper=0
