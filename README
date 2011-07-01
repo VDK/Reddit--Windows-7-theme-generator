@@ -9,12 +9,8 @@ I used the Reddit API to reformat the latest posts into the appropriate rss form
 
 
 #THINGS THAT NEED WORKING/TESTING ON
-
+* having NSFW filter would be apropriate.
 * the filetype is now determened by the extension on the URL this could be fixed by trying to find out the filetype in some other way. 
-* imgur pics that aren't directly linked should be tested for filetype.
-* having NSFW pics show up isn't really apropriate.
-* imgur pics that aren't directly linked are now asumed to be JPEG's. What if they are GIF or PNG?
-* what if reddit is down?
+* imgur pics that aren't directly need more testing
 * in theory it should be posible to have multiple reddits show up, but at the time of writing causes an error. Having too many subreddits linked into one causes reddit itself to crash, it seems.
-* maybe .gif's need to be excluded.
 * would be nice if Flickr pictures that aren't direct linke to could also be included.
