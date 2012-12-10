@@ -69,5 +69,6 @@ MTSM=DABJDKT
 Interval=1800000
 Shuffle=1
 RSSFeed=http://veradekok.nl/win7theme/rss.php?sub=<? echo $subreddit;?>&nsfw=<?echo $nsfw;?>
+
 [boot]
 SCRNSAVE.EXE=
