@@ -1,8 +1,8 @@
-I’ve been a long time Redditor. Now 4 months ago a new subreddit has swept the floor with /r/pics an made us OD on a constant stream of high quality pictures. /r/EarthPorn soon was followed by /r/AlbumArtPorn, /r/AnimalPorn and many others.
+I’ve been a long time Redditor. I thought it would be awesome if you could automaticly download /r/EarthPorn as wallpapers. Windows 7 actually had the option of automaticaly downloading pictures from RSS feed. The default Reddit RSS feed needed a only a little tweaking.
 
-I thought it would be awesome if you could have those pictures in rotation as your wallpaper, and soon found out Windows 7 actually had the option of powering a custom theme using a RSS feed.
+Now you too can generate a .theme file <a href=http://veradekok.nl/win7theme/form.html>here</a>. This lets my server generate the RSS feed. 
 
-I used the Reddit API to reformat the latest posts into the appropriate rss format and soon got it working. Now you too can generate a .theme file at http://veradekok.nl/win7theme/form.html . 
+I don't actually know how mutch traffic this is going to generate. I might pull this project offline if it were to cost me anything.
 
 
 
