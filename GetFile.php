@@ -4,7 +4,7 @@ $subreddit =
   
 //Get NSFW filter, default = on.  
 $nsfw =  
-  (!empty($_GET['nsfw']) ? $_GET['sub'] : 'on');
+  (!empty($_GET['nsfw']) ? $_GET['nsfw'] : 'on');
 //trigger download  
 header('Content-Disposition: attachment; filename="'.$subreddit.'-win7theme.theme"');
 ?>[Theme]
