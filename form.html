@@ -1,6 +1,18 @@
 <html><head><title>Reddit Windows 7 theme generator</title>
 <style tyle=text/css>
 option.red {background-color: #cc0000; font-weight: bold; font-size: 12px;}
+form li
+{
+	display:block;
+	margin:0;
+	padding:4px 5px 2px 9px;
+	position:relative;
+}
+input
+{
+	width:200px;
+}
+select{ width:200px;}
 </style>
 <body>
 <fieldset>
@@ -17,7 +29,7 @@ option.red {background-color: #cc0000; font-weight: bold; font-size: 12px;}
         <li id="li_2" >
           <label class="description" for="nsfw">NSFW filter </label>
           <div>
-            <select class="element select medium" id="nsfw" name="nsfw"> 
+            <select class="element select medium" id="nsfw" name="nsfw" width="100px"> 
               <option value="On" selected="selected">On</option>
               <option value="Off" class="red">Off</option>
             </select>
@@ -28,7 +40,7 @@ option.red {background-color: #cc0000; font-weight: bold; font-size: 12px;}
           </li>
         </ul>
       </div
-      </form>	
+		</form>	
 </fieldset>
 </body>
 </html>
