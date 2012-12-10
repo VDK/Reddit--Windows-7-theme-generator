@@ -1,8 +1,11 @@
 <html><head><title>Reddit Windows 7 theme generator</title>
+<style tyle=text/css>
+option.red {background-color: #cc0000; font-weight: bold; font-size: 12px;}
+</style>
 <body>
 <fieldset>
 <legend>Generate a Reddit Windows 7 theme</legend>
-  <form method="get" action="getFile.php">
+	<form method="get" action="getFile.php">
 		<div class="form_description">					
 			<ul >
         <li id="li_1" >
@@ -16,16 +19,16 @@
           <div>
             <select class="element select medium" id="nsfw" name="nsfw"> 
               <option value="On" selected="selected">On</option>
-              <option value="Off" >Off</option>
+              <option value="Off" class="red">Off</option>
             </select>
           </div> 
           </li>
           <li class="buttons">
-            <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+            <input id="saveForm" class="button_text" type="submit" name="submit" value="Create theme" />
           </li>
         </ul>
       </div
-		</form>	
+      </form>	
 </fieldset>
 </body>
 </html>
