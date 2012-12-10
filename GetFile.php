@@ -7,9 +7,13 @@ $nsfw =
   (!empty($_GET['nsfw']) ? $_GET['nsfw'] : 'On');
 //trigger download  
 header('Content-Disposition: attachment; filename="'.$subreddit.'-win7theme.theme"');
+//Making multiple subreddits posible by replacing the "+" sign
+
+$subreddit_title = str_replace( "+", " + ", $subreddit);  
+$subreddit = str_replace( "+", "%2B", $subreddit);  
 ?>[Theme]
 ; Windows 7 - IDS_THEME_DISPLAYNAME_AERO
-DisplayName=Reddit <?php echo $subreddit; ?> theme
+DisplayName=Reddit <?php echo $subreddit_title; ?> theme
 
 ; Computer - SHIDI_SERVER
 [CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
