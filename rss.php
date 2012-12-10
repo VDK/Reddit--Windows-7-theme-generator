@@ -20,6 +20,11 @@ header ("Content-Type:text/xml");
 //Get subreddit name.
 $subreddit =
   (!empty($_GET['sub']) ? $_GET['sub'] : 'EarthPorn');
+  
+//Get NSFW filter, default = on.  
+
+$nsfw_filter =  
+  (!empty($_GET['nsfw']) ? $_GET['nsfw'] : 'on');
 
 //Get file content.
 $request =
@@ -34,7 +39,7 @@ echo '
   <rss version="2.0"> 
     <channel>
       <title>Reddit '.$subreddit.' Windows 7 theme rss feed</title>
-      <link>http://veradekok.nl/win7theme/rss.php</link>
+      <link>http://veradekok.nl/win7theme/rss2.php</link>
       <description></description>
       <ttl>Reddit '.$subreddit.' win7 theme</ttl>
 ';
@@ -42,37 +47,41 @@ echo '
 //Loop JSON feed items.
 foreach ($json['data']['children'] as $child)
 {
-  $extension =
-    substr($child['data']['url'],-4);
+  //NSFW filter
+  if (!$child['data']['over_18']||($child['data']['over_18'] && $nsfw_filter == 'off')){
+
+    //Determine data type
+    $extension =
+      substr($child['data']['url'],-4);
     $extension = strtolower($extension);
-  //Determine data type.
-  $data_type = '';
-  switch($extension)
-  { 
-    case '.png':
-      $data_type = 'image/png';
-      break;
-    case '.gif':
-      $data_type = 'image/gif';
-      break;
-    case '.jpg':
-    case 'jpeg': 
+    $data_type = '';
+    switch($extension)
+    { 
+      case '.png':
+        $data_type = 'image/png';
+        break;
+      case '.gif':
+        $data_type = 'image/gif';
+        break;
+      case '.jpg':
+      case 'jpeg': 
+        $data_type = 'image/jpeg';
+        break; 
+    }
+
+    //If this is an image from imgur.com, the data type has to be image/jpeg as well.
+    if($child['data']['domain'] == 'imgur.com'){
       $data_type = 'image/jpeg';
-      break; 
-  }
+    }
 
-  //If this is an image from imgur.com, the data type has to be image/jpeg as well.
-  if($child['data']['domain'] == 'imgur.com'){
-    $data_type = 'image/jpeg';
-  }
+    //If data type is set, return item:
+    if(!empty($data_type)){
 
-  //If data type is set, return item:
-  if(!empty($data_type)){
+      echo
+        item_start($child['data']).
+        '<enclosure url="'.$child['data']['url'].'" type="'.$data_type.'"/></item>';
 
-    echo
-      item_start($child['data']).
-      '<enclosure url="'.$child['data']['url'].'" type="'.$data_type.'"/></item>';
-
+    }
   }
 }
 
