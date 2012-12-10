@@ -4,12 +4,12 @@ $subreddit =
   
 //Get NSFW filter, default = on.  
 $nsfw =  
-  (!empty($_GET['nsfw']) ? $_GET['nsfw'] : 'on');
+  (!empty($_GET['nsfw']) ? $_GET['nsfw'] : 'On');
 //trigger download  
 header('Content-Disposition: attachment; filename="'.$subreddit.'-win7theme.theme"');
 ?>[Theme]
 ; Windows 7 - IDS_THEME_DISPLAYNAME_AERO
-DisplayName=Reddit EarthPorn theme
+DisplayName=Reddit <?php echo $subreddit; ?> theme
 
 ; Computer - SHIDI_SERVER
 [CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
