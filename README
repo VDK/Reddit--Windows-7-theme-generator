@@ -6,13 +6,14 @@ This lets my server generate the RSS feed. I don't actually know how mutch traff
 
 
 
-#THINGS THAT NEED WORKING/TESTING ON
-* the filetype is now determened by the extension on the URL this could be fixed by trying to find out the filetype in some other way. 
-* imgur pics that aren't directly linked need more testing
+H1. TODO
+
+* imgur pics that aren't directly linked are buggy.
 * would be nice if Flickr pictures that aren't direct linke to could also be included.
+* The way filetype is determined isn't pretty
 
 
-== Update 10/12/12 ==
+H2. Update 10/12/12 
 
 * NSFW filter implemented
 * Created a .theme generator
