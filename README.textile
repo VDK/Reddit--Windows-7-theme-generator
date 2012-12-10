@@ -6,7 +6,7 @@ This lets my server generate the RSS feed. I don't actually know how mutch traff
 
 
 
-h1. TODO
+h2. TODO
 
 * imgur pics that aren't directly linked are buggy.
 * would be nice if Flickr pictures that aren't direct linke to could also be included.
